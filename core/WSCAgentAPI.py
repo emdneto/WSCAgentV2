@@ -2,15 +2,15 @@
 from flask import Flask
 from flask_restful import Resource, Api
 import logging
-from core.resources import DeploySSID
+from core.resources import DeploySSID, UpdateSSID, DeleteSSID
 import logging
 import sys
 
 root = logging.getLogger()
-root.setLevel(logging.DEBUG)
+root.setLevel(logging.INFO)
 
 handler = logging.StreamHandler(sys.stdout)
-handler.setLevel(logging.DEBUG)
+handler.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - [%(name)s] - %(levelname)s - %(message)s')
 handler.setFormatter(formatter)
 root.addHandler(handler)
@@ -27,6 +27,8 @@ class WSCAgentRestfulAPI(object):
         
     def _addResources(self):
         self.api.add_resource(DeploySSID, '/necos/wscagent/ssid/deploy')
+        self.api.add_resource(UpdateSSID, '/necos/wscagent/ssid/update')
+        self.api.add_resource(DeleteSSID, '/necos/wscagent/ssid/delete')
         
     def run(self):
-        self.app.run(host='0.0.0.0', port='8080', debug=True)
+        self.app.run(host='0.0.0.0', port='8089', debug=True)
