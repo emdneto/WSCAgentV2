@@ -13,6 +13,13 @@ $ apt install python3.7
 $ git clone <git@github.com:Zowder/WanSliceControllerAgent.git>
 ```
 
+#### Gitlab EWG: 
+
+```bash
+$ https://gitlab.com/necos-ufrn/ewg 
+
+$ git checkout code-refactoring
+```
 #### Configure virtualenv
 ```bash
 $ apt install python3-pip
