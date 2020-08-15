@@ -5,7 +5,7 @@ import logging
 from core.WSCAgent import pCPEAgent
 
 class DeploySSID(Resource):
-    
+    #TO:DO Lembrar de sincronizar os commits com a maquina do wsc
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('slice_id', type=int, help='Missing Slice Identification. Provide a Int Value', required=True)
