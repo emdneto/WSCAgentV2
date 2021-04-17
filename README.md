@@ -105,7 +105,7 @@ This method deploys a pair of ssids at once.
 
 | Method |      URI       |
 | ------ | -------------- |
-| POST    | `/necos/wscagent/ssid/deploy` |
+| POST    | `/necos/wscagent/ssid` |
 
 Below is an example of request parameters received by the API in JSON
 
@@ -158,7 +158,7 @@ This method updates the pair of ssids in a given pCPE.
 
 | Method |      URI       |
 | ------ | -------------- |
-| POST    | `/necos/wscagent/ssid/update` |
+| PUT    | `/necos/wscagent/ssid` |
 
 Below is an example of request parameters received by the API in JSON
 
@@ -189,7 +189,7 @@ This method deletes the pair of ssids in a given pCPE.
 
 | Method |      URI       |
 | ------ | -------------- |
-| POST    | `/necos/wscagent/ssid/delete` |
+| DELETE    | `/necos/wscagent/ssid` |
 
 Below is an example of request parameters received by the API in JSON
 
