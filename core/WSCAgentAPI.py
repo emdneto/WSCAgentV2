@@ -26,9 +26,9 @@ class WSCAgentRestfulAPI(object):
         self._addResources()
         
     def _addResources(self):
-        self.api.add_resource(DeploySSID, '/necos/wscagent/ssid/deploy')
-        self.api.add_resource(UpdateSSID, '/necos/wscagent/ssid/update')
-        self.api.add_resource(DeleteSSID, '/necos/wscagent/ssid/delete')
+        self.api.add_resource(DeploySSID, '/necos/wscagent/ssid')
+        self.api.add_resource(UpdateSSID, '/necos/wscagent/ssid')
+        self.api.add_resource(DeleteSSID, '/necos/wscagent/ssid')
         
     def run(self):
         self.app.run(host='0.0.0.0', port='8089', debug=True)
