@@ -21,7 +21,7 @@ class DeploySSID(Resource):
 
 class UpdateSSID(Resource):
         
-    def post(self):
+    def put(self):
         parser = reqparse.RequestParser()
         parser.add_argument('slice_id', type=int, help='Missing Slice Identification. Provide a Int Value', required=True)
         parser.add_argument('pcpe_ip_address', type=str, help='Missing PCPE IP', required=True)
@@ -36,7 +36,7 @@ class UpdateSSID(Resource):
     
 class DeleteSSID(Resource):
         
-    def post(self):
+    def delete(self):
         parser = reqparse.RequestParser()
         parser.add_argument('slice_id', type=int, help='Missing Slice Identification. Provide a Int Value', required=True)
         parser.add_argument('pcpe_ip_address', type=str, help='Missing PCPE IP', required=True)
